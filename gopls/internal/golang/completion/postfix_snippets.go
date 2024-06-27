@@ -219,7 +219,7 @@ for {{.VarName .ElemType "e" | .Placeholder}} := range {{.X}} {
 	label:   "print",
 	details: "print to stdout",
 	body: `{{if and (ne .Kind "tuple") .StmtOK -}}
-{{.Import "fmt"}}.Printf("{{.EscapeQuotes .X}}: %v\n", {{.X}})
+{{.Import "fmt"}}.Printf("{{.EscapeQuotes .X}}: %+v\n", {{.X}})
 {{- end}}`,
 }, {
 	label:   "print",
